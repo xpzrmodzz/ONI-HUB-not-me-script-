@@ -907,7 +907,7 @@ local Textbox = Section:CreateTextbox('ONI Name Change', '', function(Value)
    -- end
 
 
-    endstring = "👹 \r\n ".. Username
+    endstring = " \r\n ".. Username
 
     game:GetService("Players").LocalPlayer.PlayerGui.RolePlayName.Frame.bodyFrame.submitBtn.nameEvent:FireServer(endstring)
 end)
@@ -925,8 +925,8 @@ Button = Section:CreateButton("Bug Everyone's HUD", function()
     game:GetService("Players").LocalPlayer.PlayerGui.RolePlayName.Frame.bodyFrame.submitBtn.nameEvent:FireServer(fullstring)
 end)
 
-Button = Section:CreateButton('Cover the Leaderboard with ONI', function()
-    local string = "\r\n 👹ONI👹"
+Button = Section:CreateButton('Cover the Leaderboard with 😈AN😈', function()
+    local string = "\r\n 😈AN😈"
     local fullstring = ""
     for i = 1, 75 do
         fullstring = fullstring .. string
@@ -1982,8 +1982,8 @@ end)
 TabMisc = Window:CreateTab('Pack Settings', false, 'rbxassetid://3926305904', Vector2.new(524, 44), Vector2.new(36, 36))
 Section = TabMisc:CreateSection('Pack Settings')
 
-Button = Section:CreateButton('Create UK Pack', function()
-    game:GetService("Players").LocalPlayer.PlayerGui.TeamGUI.createFrame.bodyFrame.createButton.createTeamEvent:FireServer('🇬🇧')
+Button = Section:CreateButton('Create AN pack', function()
+    game:GetService("Players").LocalPlayer.PlayerGui.TeamGUI.createFrame.bodyFrame.createButton.createTeamEvent:FireServer('😈AN😈')
 end)
 
 Button = Section:CreateButton('Create ONI Pack', function()
