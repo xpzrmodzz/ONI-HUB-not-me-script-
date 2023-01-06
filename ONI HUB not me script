@@ -38,7 +38,7 @@ Character = Player.Character or Player.CharacterAdded:Wait()
 
 --[username] = 'webhook'
 local Webhook = { -- For Grinding, tells you your leveling speed.
-    ["XelXel"] = 'https://discord.com/api/webhooks/1852735481765/3IhmtR2PqI5zaoUGpzrfbfFDu2P0x0pbIs1KY5Zx_ZChzNoQ8LH', -- Example Webhook, doesn't work.
+    ["XelXel"] = 'https://discordapp.com/api/webhooks/1060646794977087518/FvsvsyQXHjSZKxspt3Xc-1dMRFEnfjG-tcu32uzqNZRi084YCLuhzIgSIUI_Nja_AMBE', -- Example Webhook, doesn't work.
 }
 
 if Webhook[game.Players.LocalPlayer.Name] then
@@ -124,8 +124,7 @@ local BotPhotoURL = 'https://media.discordapp.net/attachments/856034478408728576
 local Red = tonumber(tostring("0xFF0000"))
 local Green = tonumber(tostring("0x32CD32"))
 local Timestamp = os.date("%Y-%m-%dT%X.000Z")
-local Request = http_request or request or HttpPost or syn.request
-
+local Request = 'https://discord.com/channels/1060645004424511608/1060645004424511611'
 
 
 
@@ -150,7 +149,7 @@ local LostExpPerMin = 0
 local xseconds = 0
 local xmins = 0
 
-if getgenv().LocalWebhookId ~= 'https://discordapp.com/api/webhooks/1060645941503336538/TJagiKrTug-mM87ntUoB6yvX08EOYM5QRds1NOaA4yw-tJ3LMeLJJtzi6qtent9NK7DC' then
+if getgenv().LocalWebhookId ~= 'https://discordapp.com/api/webhooks/1060646794977087518/FvsvsyQXHjSZKxspt3Xc-1dMRFEnfjG-tcu32uzqNZRi084YCLuhzIgSIUI_Nja_AMBE' then
     local TrackingWebhookSeconds = 0
     local TrackingWebhookMinutes = 0
     local TrackedTime = 0
