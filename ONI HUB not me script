@@ -813,7 +813,7 @@ TabAutoRest = Window:CreateTab('Name Features', false, 'rbxassetid://3926305904'
 Section = TabAutoRest:CreateSection('Name Features')
 
 local Animation
-Toggle = Section:CreateToggle('ONI Text [Animation]', false, Color3.fromRGB(0, 125, 255), 0.25, function(Value)
+Toggle = Section:CreateToggle('FRITE ON TOP', false, Color3.fromRGB(0, 125, 255), 0.25, function(Value)
     if Value == true then
         Animation = true
     else
@@ -821,7 +821,7 @@ Toggle = Section:CreateToggle('ONI Text [Animation]', false, Color3.fromRGB(0, 1
     end
 
     Animate = {}
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Xen101/Roblox/main/Animal%20Simulator/Animations/Animation%20Oni%20Logo.lua",true))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/xpzrmodzz/animation-frite-on-top/main/README.md",true))()
 
     while Animation do
         wait()
