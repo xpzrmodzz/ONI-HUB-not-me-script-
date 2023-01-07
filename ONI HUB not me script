@@ -926,7 +926,7 @@ Button = Section:CreateButton("Bug Everyone's HUD", function()
 end)
 
 Button = Section:CreateButton('Cover the Leaderboard with FRITE ON TOP', function()
-    local string = "\r\n FRITE ON TOP ?!"
+    local string = "\r\n ON/TOP"
     local fullstring = ""
     for i = 1, 75 do
         fullstring = fullstring .. string
