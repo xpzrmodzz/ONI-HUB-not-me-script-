@@ -1986,8 +1986,8 @@ Button = Section:CreateButton('Create AN Pack', function()
     game:GetService("Players").LocalPlayer.PlayerGui.TeamGUI.createFrame.bodyFrame.createButton.createTeamEvent:FireServer('AN')
 end)
 
-Button = Section:CreateButton('Create ONI Pack', function()
-    game:GetService("Players").LocalPlayer.PlayerGui.TeamGUI.createFrame.bodyFrame.createButton.createTeamEvent:FireServer('-👹ONI👹-')
+Button = Section:CreateButton('Create FRITE ON TOP', function()
+    game:GetService("Players").LocalPlayer.PlayerGui.TeamGUI.createFrame.bodyFrame.createButton.createTeamEvent:FireServer('FRITE ON TOP')
 end)
 
 local Invitedelay = 0.3
