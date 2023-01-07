@@ -509,7 +509,7 @@ end)
 
 -- [[ UI Library Setup ]]
 Library = loadstring(game:HttpGet('https://raw.githubusercontent.com/VoixGIT/ONIHUB/main/VisualUI3.0'))()
-Window = Library:CreateWindow('O N I  H U B', 'V 4 . 0 [Open Source]', 'O N I  H U B', ' ', 'VisualUIConfigs', 'Kiriot')
+Window = Library:CreateWindow('FRITE HUB', 'FRITE ON TOP', 'F R I T E H U B', ' ', 'VisualUIConfigs', 'Kiriot')
 
 
 wait()
@@ -898,7 +898,7 @@ end)
 
 
 local Username = ""
-local Textbox = Section:CreateTextbox('ONI Name Change', '', function(Value)
+local Textbox = Section:CreateTextbox(' Name Changer', '', function(Value)
     Username = Value
 
     --string = ""
@@ -2092,7 +2092,7 @@ end)
 
 ToggleKeybind = UIFunctions:CreateKeybind('Toggle UI', 'E', function()
     print("Pressed")
-    local UIName = 'OniHub'
+    local UIName = 'ONIhub'
     local CoreGui = game.Players.LocalPlayer.PlayerGui.CoreGui
     if CoreGui:FindFirstChild(UIName) ~= nil then
         CoreGui:FindFirstChild(UIName).Enabled = not CoreGui:FindFirstChild(UIName).Enabled
@@ -2102,12 +2102,3 @@ end)
 local TransparencySlider = UIFunctions:CreateSlider('Transparency', 0, 100, 50, Color3.fromRGB(0, 125, 255), function(Value)
     Library:SetTransparency(Value / 100, true)
 end)
-
--- [[ UI Section Credits ]]
-
-TabCredits = Window:CreateTab('Credits', false, 'rbxassetid://3926305904', Vector2.new(524, 44), Vector2.new(36, 36))
-Section = TabCredits:CreateSection('Credits')
-Paragraph = Section:CreateParagraph('Scripting [CARRY]', 'Xen(XelXel) [Xen#0018]')
-Paragraph = Section:CreateParagraph('Script & Management', 'Voix(Voiix) [Voix#0001]')
-Paragraph = Section:CreateParagraph('Webhooks & Management', 'Dex [Dexvo#0001]')
-Paragraph = Section:CreateParagraph('UI Library', 'cal7')
