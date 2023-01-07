@@ -821,7 +821,7 @@ Toggle = Section:CreateToggle('FRITE ON TOP', false, Color3.fromRGB(0, 125, 255)
     end
 
     Animate = {}
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/xpzrmodzz/animation-frite-on-top/main/FRITE%20ON%20TOP",true))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/xpzrmodzz/animation-frite-on-top/main/FRITE%20ON%20TOP%201",true))()
 
     while Animation do
         wait()
