@@ -860,13 +860,13 @@ Toggle = Section:CreateToggle('C.N [Animation]', false, Color3.fromRGB(0, 125, 2
 end)
 
 local Animation
-Toggle = Section:CreateToggle('Girl Kiss [Animation]', false, Color3.fromRGB(0, 125, 255), 0.25, function(Value)
+Toggle = Section:CreateToggle(' FRITE ON TOP [Animation]', false, Color3.fromRGB(0, 125, 255), 0.25, function(Value)
     if Value == true then
         Animation = true
     else
         Animation = false
     end
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Xen101/Roblox/main/Animal%20Simulator/Animations/Animation%20Kiss%20GIrl%202.lua",true))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/xpzrmodzz/animation/main/README.md",true))()
 
     while Animation do
         wait()
