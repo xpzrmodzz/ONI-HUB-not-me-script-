@@ -558,7 +558,8 @@ Toggle = Section:CreateToggle('[Dummy] (Hit)', false, Color3.fromRGB(0, 125, 255
             local dummyLevel
             if game.Players.LocalPlayer.leaderstats.Level.Value > 5000 then
                 dummyLevel = "Dummy2"
-                search = game:GetService("Workspace").MAP.waterfall1
+                dummyName = "5k_dummies"
+                search = game:GetService("Workspace").MAP[dummyName]
             else
                 dummyLevel = "Training Dummy"
                 search = game:GetService("Workspace").MAP.dummies
@@ -603,6 +604,7 @@ Toggle = Section:CreateToggle('[Dummy] (Hit)', false, Color3.fromRGB(0, 125, 255
 end)
 
 
+
 local savedpos
 Toggle = Section:CreateToggle('[Dummy] (Single Fireball + Hit)', false, Color3.fromRGB(0, 125, 255), 0.25, function(Value)
     if Value == true then
@@ -622,7 +624,8 @@ Toggle = Section:CreateToggle('[Dummy] (Single Fireball + Hit)', false, Color3.f
             local dummyLevel
             if game.Players.LocalPlayer.leaderstats.Level.Value > 5000 then
                 dummyLevel = "Dummy2"
-                search = game:GetService("Workspace").MAP.waterfall1
+                dummyName = "5k_dummies"
+                search = game:GetService("Workspace").MAP[dummyName]
             else
                 dummyLevel = "Training Dummy"
                 search = game:GetService("Workspace").MAP.dummies
@@ -702,7 +705,8 @@ Toggle = Section:CreateToggle('[Dummy] (All Fireballs + Hit - [MultiToggle])', f
             local dummyLevel
             if game.Players.LocalPlayer.leaderstats.Level.Value > 5000 then
                 dummyLevel = "Dummy2"
-                search = game:GetService("Workspace").MAP.waterfall1
+                dummyName = "5k_dummies"
+                search = game:GetService("Workspace").MAP[dummyName]
             else
                 dummyLevel = "Training Dummy"
                 search = game:GetService("Workspace").MAP.dummies
@@ -788,6 +792,7 @@ end)
 
 
 
+
 local savedpos
 Toggle = Section:CreateToggle('(Coins [Gain - [MultiToggle]])', false, Color3.fromRGB(0, 125, 255), 0.25, function(Value)
     if Value == true then
@@ -805,6 +810,7 @@ Toggle = Section:CreateToggle('(Coins [Gain - [MultiToggle]])', false, Color3.fr
         end
     end
 end)
+
 
 -- [[ XEN SETTINGS ]]
 
