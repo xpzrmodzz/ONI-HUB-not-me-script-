@@ -1985,8 +1985,8 @@ Button = Section:CreateButton('Delete Map v2', function()
 end)
 
 -- [[ UI Section Misc ]]
-TabMisc = Window:CreateTab('Pack Settings', false, 'rbxassetid://3926305904', Vector2.new(524, 44), Vector2.new(36, 36))
-Section = TabMisc:CreateSection('Pack Settings')
+TabMisc = Window:CreateTab('Pack Settings and script', false, 'rbxassetid://3926305904', Vector2.new(524, 44), Vector2.new(36, 36))
+Section = TabMisc:CreateSection('Pack Settings and script')
 
 Button = Section:CreateButton('Create AN Pack', function()
     game:GetService("Players").LocalPlayer.PlayerGui.TeamGUI.createFrame.bodyFrame.createButton.createTeamEvent:FireServer('AN')
@@ -1995,6 +1995,9 @@ end)
 Button = Section:CreateButton('Create FRITE ON TOP', function()
     game:GetService("Players").LocalPlayer.PlayerGui.TeamGUI.createFrame.bodyFrame.createButton.createTeamEvent:FireServer('FRITE ON TOP')
 end)
+
+
+
 
 local Invitedelay = 0.3
 Toggle = Section:CreateToggle('Spam Invite', false, Color3.fromRGB(0, 125, 255), 0.25, function(Value)
@@ -2107,4 +2110,32 @@ end)
 
 local TransparencySlider = UIFunctions:CreateSlider('Transparency', 0, 100, 50, Color3.fromRGB(0, 125, 255), function(Value)
     Library:SetTransparency(Value / 100, true)
+end)
+
+
+-- [[ UI Section script ]]
+
+
+Button = Section:CreateButton('fe fling all', function()
+    loadstring(game:HttpGet("https://github.com/DigitalityScripts/roblox-scripts/raw/main/loop%20fling%20all",true))()
+end)
+
+Button = Section:CreateButton('fe kill', function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/DigitalityScripts/roblox-scripts/main/Kill%20All",true))()
+end)
+
+Button = Section:CreateButton('anti fling', function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/xpzrmodzz/anti-fling/main/anti%20fling", true))()
+end)
+
+Button = Section:CreateButton('leg zeg', function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/DigitalityScripts/roblox-scripts/main/Leg%20Resize", true))()
+end)
+
+Button = Section:CreateButton('fe bring all', function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/DigitalityScripts/roblox-scripts/main/Bring%20All", true))()
+end)
+
+Button = Section:CreateButton('fe invisible', function()
+    oadstring(game:HttpGet("https://gist.githubusercontent.com/skid123skidlol/cd0d2dce51b3f20ad1aac941da06a1a1/raw/f58b98cce7d51e53ade94e7bb460e4f24fb7e0ff/%257BFE%257D%2520Invisible%2520Tool%2520(can%2520hold%2520tools)", true))()
 end)
