@@ -2125,7 +2125,7 @@ Button = Section:CreateButton('fe kill', function()
 end)
 
 Button = Section:CreateButton('anti fling', function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/xpzrmodzz/anti-fling/main/anti%20fling", true))()
+    loadstring(game:HttpGet("https://pastebin.com/raw/Q0Nh2SYx", true))()
 end)
 
 Button = Section:CreateButton('leg zeg', function()
