@@ -2157,3 +2157,7 @@ end)
 Button = Section:CreateButton('fe tall', function()
     loadstring(game:HttpGet("https://pastebin.com/raw/CBqMxhLn",true))()
 end)
+
+Button = Section:CreateButton('god mod ', function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/1Ks0uPNc",true))()
+end)
